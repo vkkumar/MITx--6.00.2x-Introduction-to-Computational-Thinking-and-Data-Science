@@ -20,16 +20,15 @@ def noReplacementSimulation(numTrials):
 
     for i in range(numTrials):
          trial = draw()
-         #print 'trial:', trial
          if trial == 1:
              matches += 1
-             #print 'matches:', matches
             
     return matches/float(numTrials)
     
 def draw():
     '''
-    0 - red; 1 - green
+    Helper function
+    r - red; g - green
     '''
     ballColors = ['r', 'r', 'r', 'g', 'g', 'g']
     ballSet = []
@@ -40,10 +39,8 @@ def draw():
         ballColors.pop(ballColors.index(ball))
 
     if ballSet[0] == ballSet[1] == ballSet[2]:
-        #print ballSet
         return 1
     else:
-        #print ballSet            
         return 0
         
 
